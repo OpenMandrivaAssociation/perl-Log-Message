@@ -46,7 +46,7 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
+%defattr(644,root,root,755)
 %doc README
 %{perl_vendorlib}/%{modprefix}
 %{_mandir}/*/*
