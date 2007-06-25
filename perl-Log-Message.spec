@@ -4,7 +4,7 @@
 
 %define version 0.01
 
-%define	rel	2
+%define	rel	3
 %define release %mkrel %{rel}
 
 Summary:	Log Message
