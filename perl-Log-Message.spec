@@ -2,9 +2,9 @@
 %define name	perl-%{module}
 %define	modprefix Log
 
-%define version 0.01
+%define version 0.02
 
-%define	rel	3
+%define	rel	1
 %define release %mkrel %{rel}
 
 Summary:	Log Message
