@@ -1,26 +1,24 @@
-%define	module	Log-Message
-%define name	perl-%{module}
-%define	modprefix Log
+%define	upstream_name	 Log-Message
+%define upstream_version 0.02
 
-%define version 0.02
-
-%define	rel	1
-%define release %mkrel %{rel}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Log Message
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Log/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
+BuildRequires:	perl(IPC::Cmd)                  >= 0.360.0
+BuildRequires:  perl(Module::Load::Conditional) >= 0.40.0
+BuildRequires:  perl-version
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-root
-BuildRequires:	perl(IPC::Cmd) >= 0.36 perl(Module::Load::Conditional) >= 0.04 perl-version
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 
 %description
@@ -32,7 +30,7 @@ identify it or group it, and a level at which to handle the message (for
 example, log it, or die with it)
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -45,11 +43,11 @@ example, log it, or die with it)
 rm -rf %{buildroot}
 %makeinstall_std
 
+%clean
+rm -rf %{buildroot}
+
 %files
 %defattr(644,root,root,755)
 %doc README
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/Log
 %{_mandir}/*/*
-
-%clean
-rm -rf %{buildroot}
