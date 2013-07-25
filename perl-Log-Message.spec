@@ -1,15 +1,15 @@
 %define	upstream_name	 Log-Message
-%define upstream_version 0.04
+%define upstream_version 0.08
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.08
+Release:	1
 
 Summary:	Log Message
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Log/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Log/Log-Message-0.08.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(IPC::Cmd)                  >= 0.360.0
@@ -81,3 +81,4 @@ make test
 
 * Thu Jun 21 2007 Buchan Milne <bgmilne@mandriva.org> 0.01-1mdv2007.1
 - initial package
+
