@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.08
-Release:	1
+Release:	2
 
 Summary:	Log Message
 License:	Artistic/GPL
@@ -43,42 +43,3 @@ make test
 %doc README
 %{perl_vendorlib}/Log
 %{_mandir}/*/*
-
-
-%changelog
-* Sat Jan 08 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.40.0-1mdv2011.0
-+ Revision: 630623
-- update to new version 0.04
-
-* Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2011.0
-+ Revision: 408962
-- rebuild using %%perl_convert_version
-
-* Tue Dec 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.02-1mdv2009.1
-+ Revision: 314757
-- update to new version 0.02
-
-* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 0.01-3mdv2009.0
-+ Revision: 140691
-- restore BuildRoot
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - kill re-definition of %%buildroot on Pixel's request
-
-* Mon Jun 25 2007 Buchan Milne <bgmilne@mandriva.org> 0.01-3mdv2008.0
-+ Revision: 44117
-- Rebuild to fix file corruption caused by spec-helper
-
-* Fri Jun 22 2007 Buchan Milne <bgmilne@mandriva.org> 0.01-2mdv2008.0
-+ Revision: 42940
-- Fix permissions
-
-* Fri Jun 22 2007 Buchan Milne <bgmilne@mandriva.org> 0.01-1mdv2008.0
-+ Revision: 42852
-- Import perl-Log-Message
-
-
-
-* Thu Jun 21 2007 Buchan Milne <bgmilne@mandriva.org> 0.01-1mdv2007.1
-- initial package
-
