@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.08
-Release:	5
+Release:	6
 
 Summary:	Log Message
 License:	Artistic/GPL
