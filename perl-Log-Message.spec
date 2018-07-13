@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Log/Log-Message-0.08.tar.gz
 
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	perl(IPC::Cmd)                  >= 0.360.0
 BuildRequires:  perl(Module::Load::Conditional) >= 0.40.0
